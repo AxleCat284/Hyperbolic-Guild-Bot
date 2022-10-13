@@ -1,4 +1,4 @@
-# Wrist Spasm
+# Hyperbolic Guild Bot
 Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic)<br />
 
 Made by Calculus#0001 and DuckySoLucky#5181 Edited by AxleWitch#9171
