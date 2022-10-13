@@ -7,7 +7,7 @@
     "messageRepeatBypassLength": 24
   },
   "discord": {
-    "token": "MTAxNjA5NDMzNDA5OTE0NDcxNA.GkYpHS.JEDUsg1hAbYruo4csWjQkSYfcztyRvB_yJ3ii4",
+    "token": "",
     "clientID": "1016094334099144714",
     "serverID": "859982166673588246",
     "guildChatChannel": "1030129749445578762",
