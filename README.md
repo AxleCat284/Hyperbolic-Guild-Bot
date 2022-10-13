@@ -1,13 +1,16 @@
 # Wrist Spasm
-Official Discord Bot of [Hypixel Network Wristspasm Guild](https://discord.gg/BjcMKKMHUf)<br />
+Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic)<br />
 
-Made by Calculus#0001 and DuckySoLucky#5181
+Made by Calculus#0001 and DuckySoLucky#5181 Edited by AxleWitch#9171
 <hr>
 
 ### To-Do List
 
 - [ ] None
-  - None
+  - Automated gexp checks
+  - more commands
+  - fixes to stuff
+  - more customization
 
 ### Credits
 
@@ -23,4 +26,5 @@ Made by Calculus#0001 and DuckySoLucky#5181
 - [SkyShiiyu API](https://github.com/SkyCryptWebsite/SkyCrypt)
 - [SlothPixel API](https://github.com/slothpixel)
 - [Senither](https://github.com/Senither)
+- DuckySoLucky, for the bot
 
