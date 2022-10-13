@@ -36,7 +36,7 @@ module.exports = {
                     .setColor(5763719)
                     .setAuthor({ name: 'Successfully linked!'})
                     .setDescription(`\`${username}\` has been successfully linked to \`${(await interaction.guild.members.fetch(id)).user.username}#${(await interaction.guild.members.fetch(id)).user.discriminator}\``)
-                    .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+                    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                 await interaction.followUp({ embeds: [successfullyLinked] });
 
 
@@ -45,7 +45,7 @@ module.exports = {
                     .setColor(15548997)
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(error)
-                    .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+                    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                 interaction.followUp({ embeds: [errorEmbed] });
             }
         } else {
@@ -53,7 +53,7 @@ module.exports = {
                 .setColor(15548997)
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(`You do not have permission to run this command.`)
-                .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
             interaction.followUp({ embeds: [errorEmbed] });  
         }
     },

@@ -8,7 +8,7 @@ const verifyEmbed = new EmbedBuilder()
     .setColor(15548997)
     .setAuthor({ name: 'An Error has occurred'})
     .setDescription(`You must link your account using \`/verify\` before using this command.`)
-    .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
 
 module.exports = {
     name: 'apply',
@@ -50,7 +50,7 @@ module.exports = {
                         .setColor(2067276)
                         .setAuthor({ name: 'Guild Application.'})
                         .setDescription(`Guild Application has been successfully sent to the guild staff.`)
-                        .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+                        .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                     interaction.followUp({ embeds: [applicationEmbed] })
 
 
@@ -68,7 +68,7 @@ module.exports = {
                             { name: 'Senither Weight', value: `${addCommas(toFixed((weight), 2))}`, inline: true },
                         )
                         .setThumbnail(`https://www.mc-heads.net/avatar/${player.nickname}`) 
-                        .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+                        .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                     client.channels.cache.get(config.channels.joinRequests).send({ embeds: [statsEmbed] })
 
 
@@ -78,7 +78,7 @@ module.exports = {
                         .setColor(15548997)
                         .setAuthor({ name: 'An Error has occurred!'})
                         .setDescription(`You do not meet requirements.`)
-                        .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+                        .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                     interaction.followUp({ embeds: [errorEmbed] });
                 }
 
@@ -88,7 +88,7 @@ module.exports = {
                 .setColor(15548997)
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
-                .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
             interaction.followUp({ embeds: [errorEmbed] });
         }
     },

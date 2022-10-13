@@ -2,7 +2,7 @@ const config = require('../../../config.json')
 
 module.exports = {
   name: 'blacklist',
-  description: 'Demotes the given user by one guild rank.',
+  description: 'Blacklists the user from the bot',
   options: [
     {
         name: 'arg',

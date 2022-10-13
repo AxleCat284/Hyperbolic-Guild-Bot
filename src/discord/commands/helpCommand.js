@@ -52,7 +52,7 @@ module.exports = {
                     { name: '**Minecraft**: ', value: `${minecraftCommands}`, inline: true },
                     { name: '**Discord**: ', value: `${discordCommands}`, inline: true },
                 )
-                .setFooter({ text: 'by DuckySoLucky#5181 | /help [command] for more information', iconURL: 'https://imgur.com/tgwQJTX.png' })
+                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
             await interaction.followUp({ embeds: [helpMenu] })
         } else {
             let options = '', found = false;
@@ -68,7 +68,7 @@ module.exports = {
                             .setColor(0x0099FF)
                             .setTitle(`**${config.minecraft.prefix}${command.name}**`)
                             .setDescription(description + '\n')
-                            .setFooter({ text: 'by DuckySoLucky#5181 | () = required, [] = optional', iconURL: 'https://imgur.com/tgwQJTX.png' })
+                            .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
                         await interaction.followUp({ embeds: [commandData] })
                         break;
                     } 
@@ -85,7 +85,7 @@ module.exports = {
                             .addFields(
                                 { name: '**Options** ', value: `${options}`, inline: true },
                             )
-                            .setFooter({ text: 'by DuckySoLucky#5181 | () = required, [] = optional', iconURL: 'https://imgur.com/tgwQJTX.png' })
+                            .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
                         await interaction.followUp({ embeds: [commandData] })
                         break;
                     }
@@ -102,7 +102,7 @@ module.exports = {
                             .setColor(0x0099FF)
                             .setTitle(`**${config.minecraft.prefix}${minecraftCommandList[i].name}**`)
                             .setDescription(description + '\n')
-                            .setFooter({ text: 'by DuckySoLucky#5181 | () = required, [] = optional', iconURL: 'https://imgur.com/tgwQJTX.png' })
+                            .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
                         await interaction.followUp({ embeds: [commandData] })
                         break;
                     } else {
@@ -117,7 +117,7 @@ module.exports = {
                         .addFields(
                             { name: '**Options** ', value: `${options}`, inline: true },
                         )
-                        .setFooter({ text: 'by DuckySoLucky#5181 | () = required, [] = optional', iconURL: 'https://imgur.com/tgwQJTX.png' })
+                        .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
                     await interaction.followUp({ embeds: [commandData] })
                     break;
                 }
@@ -127,7 +127,7 @@ module.exports = {
                 .setColor('#ff0000')
                 .setTitle('Error')
                 .setDescription(`Command \`${commandName}\` was not found`)
-                .setFooter({ text: 'by DuckySoLucky#5181', iconURL: 'https://imgur.com/tgwQJTX.png' })
+                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
             await interaction.followUp({ embeds: [errorEmbed] })
         }
     }

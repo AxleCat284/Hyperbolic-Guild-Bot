@@ -1,4 +1,4 @@
-const constants = require("../constants/farming");
+
 const getSkills = require("./skills");
 
 module.exports = (player, profile) => {

@@ -50,7 +50,7 @@ module.exports = {
                 { name: '**Minecraft Information**:', value: `Bot: \`${bot.username}\`\nPrefix: \`${config.minecraft.prefix}\`\nUptime: Online since <t:${toFixed(uptime/1000, 0)}:R>\nVersion: \`${version}\``, inline: true },
                 { name: `**Discord Information**`, value: `Guild Channel: ${config.discord.guildChatChannel ? `<#${config.discord.guildChatChannel}>` :'None'}>\nOfficer Channel: ${config.discord.officerChannel ? `<#${config.discord.officerChannel}>` :'None'}>\nGuild Logs Channel: ${config.discord.loggingChannel ? `<#${config.discord.loggingChannel}>` :'None'}>\nDebugging Channel: ${config.console.debugChannel ? `<#${config.console.debugChannel}>` :'None'}\nCommand Role: <@&${config.discord.commandRole}>\nMessage Mode: \`${config.discord.messageMode}\`\nFilter: \`${config.discord.filterMessages}\`\nJoin Messages: \`${config.discord.joinMessage}\``, inline: true },
             )
-            .setFooter({ text: 'by DuckySoLucky#5181 | /help [command] for more information', iconURL: 'https://imgur.com/tgwQJTX.png' })
+            .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
         await interaction.followUp({ embeds: [ infoEmbed ] })
         
     }

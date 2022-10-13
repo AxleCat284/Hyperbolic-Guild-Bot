@@ -9,7 +9,7 @@ module.exports = {
       .setColor(0x0099FF)
       .setTitle("🏓 Pong!")
       .setDescription(`Latency: ${client.ws.ping}ms`)
-      .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' })
+      .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
       
     interaction.followUp({ embeds: [embed] })
   },
