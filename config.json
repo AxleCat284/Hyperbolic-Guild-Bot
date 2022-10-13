@@ -1,57 +1,57 @@
 {
   "minecraft": {
-    "prefix": "!",
-    "guildID": "5b8dd8cb0cf24573ab84c9ad",
-    "guildExp": 50000,
-    "messageRepeatBypass": true,
+    "prefix": "??",
+    "guildID": "5f6f85ba8ea8c99dcdd194d0",
+    "guildExp": 10000,
+    "messageRepeatBypass": false,
     "messageRepeatBypassLength": 24
   },
   "discord": {
-    "token": "",
-    "clientID": "737095235242295337",
-    "serverID": "600311056627269642",
-    "guildChatChannel": "600317865429565490",
-    "officerChannel": "999439762664468603",
-    "loggingChannel": "992017011959943238",
-    "commandRole": "975972476020490300",
+    "token": "MTAxNjA5NDMzNDA5OTE0NDcxNA.GkYpHS.JEDUsg1hAbYruo4csWjQkSYfcztyRvB_yJ3ii4",
+    "clientID": "1016094334099144714",
+    "serverID": "859982166673588246",
+    "guildChatChannel": "1030129749445578762",
+    "officerChannel": "1016109111923966012",
+    "loggingChannel": "1016109111923966012",
+    "commandRole": "880893104767529050",
     "messageMode": "minecraft",
-    "filterMessages": true,
-    "joinMessage": false,
+    "filterMessages": false,
+    "joinMessage": true,
 
-    "linkedRole": "1003353024720277504",
-    "guildMemberRole": "600313217603993617",
-    "eliteRole": "903878793859575818",
-    "noviceRole": "903345611863126126"
+    "linkedRole": "1017597161199894559",
+    "guildMemberRole": "860018913906393109",
+    "eliteRole": "860018916624302130",
+    "noviceRole": "860683429887737896"
   },
   "channels": {
-    "guildMember": "821560951677386762",
-    "guildLevel": "821560990083842089",
-    "inactivity": "740044200942239808",
-    "joinRequests": "992017011959943238"
+    "guildMember": "1022280710175871016",
+    "guildLevel": "1022280736876810290",
+    "inactivity": "945477343235940372",
+    "joinRequests": "1016109257298550914"
   },
   "console": {
-    "maxEventSize": 50,
+    "maxEventSize": 50000,
     "debug": true,
-    "debugChannel": "667191844903452672"
+    "debugChannel": "1015367075469996112"
   },
   "api": {
     "hypixelAPI": "https://api.hypixel.net",
-    "hypixelAPIkey": "",
+    "hypixelAPIkey": "5987b4d0-e69e-49ed-ae2a-0a6dda03e6b0",
 
-    "skyHelperAPI": "http://176.31.203.28:1195/v1",
+    "skyHelperAPI": "http://192.95.42.73:1924//v1",
     "skyHelperKey": "DuckySoLucky",
 
     "antiSniperAPI": "https://api.antisniper.net",
-    "antiSniperKey": "",
+    "antiSniperKey": "3a55ea8f-9e85-4003-9912-6198122cd27f",
 
     "skyShiiyuAPI": "https://sky.shiiyu.moe/api/v2",
 
     "playerDBAPI": "https://playerdb.co/api/player/minecraft",
 
-    "imgurAPIkey": ""
+    "imgurAPIkey": "98ea6fff6d0ce73"
   },
   "event": {
-    "enabled": true,
+    "enabled": false,
     "notifiers": {
       "BANK_INTEREST": true,
       "DARK_AUCTION": true,
@@ -69,21 +69,21 @@
   },
   "guildRequirement": {
     "enabled": true,
-    "autoAccept": false,
+    "autoAccept": true,
     "requirements": {
-      "bedwarsStars": 200,
-      "bedwarsStarsWithFKDR": 100,
-      "bedwarsFKDR": 2,
+      "bedwarsStars": 75,
+      "bedwarsStarsWithFKDR": 40,
+      "bedwarsFKDR": 1.5,
 
-      "skywarsStars": 15,
-      "skywarsStarsWithKDR": 10,
-      "skywarsKDR": 2,
+      "skywarsStars": 9,
+      "skywarsStarsWithKDR": 7,
+      "skywarsKDR": 1,
 
-      "duelsWins": 2500,
-      "duelsWinsWithWLR": 1500,
-      "duelsWLR": 2.5,
+      "duelsWins": 750,
+      "duelsWinsWithWLR": 200,
+      "duelsWLR": 1,
 
-      "senitherWeight": 2500,
+      "senitherWeight": 1000,
       "lilyWeight": 0
     }
   }
