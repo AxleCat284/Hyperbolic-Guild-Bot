@@ -1,0 +1,52 @@
+const { EmbedBuilder, ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, ButtonStyle,ThreadManager } = require('discord.js')
+const config = require('../../../config.json')
+
+module.exports = {
+    name: 'qotd',
+    description: 'question of the day',
+    options: [
+        {
+            name: 'number',
+            description: 'question number',
+            type: 3,
+            required: true
+        },
+        {
+            name: 'question',
+            description: 'question perams',
+            type: 3,
+            required: true
+        }
+    ],
+
+ 
+      execute: async (interaction, client) => {
+//
+//
+
+        const number = interaction.options.getString("number")
+        const question = interaction.options.getString("question")
+        
+
+        if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
+            await client.channels.cache.get('995345638571135157').send({content: `<@&995347245346066584>\n**QOTD #${number}**\n\n${question} \n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nIf you have any suggestions for the next QOTD, post them in <#1028836071217311885>\nRemember to answer in the linked Thread!\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯` })
+            const channel = client.channels.cache.get('995345638571135157')
+            const thread = await channel.threads.create({
+                name: (`QOTD ${number}`),
+                autoArchiveDuration: 60,
+                reason: (`Awnsers for QOTD #${number}`),
+            });
+            const reply = {
+                title: (`QOTD #${number}`),
+                description: (`[QOTD](https://discord.com/channels/859982166673588246/995345638571135157) Sent\nCreated Thread **${thread.name}**`),
+                timestamp: new Date().toISOString(),
+                footer: {
+                    text: (`Hyperbolic QOTDS`),
+                },
+            };
+            await interaction.followUp({embeds: [reply] })
+        } else {
+            await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+        }
+      }
+    }
