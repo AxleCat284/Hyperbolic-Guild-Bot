@@ -13,6 +13,6 @@ module.exports = {
   execute: async (interaction, client) => {
     const time = interaction.options.getString("time");
     bot.chat(`/g top ${time ? time : ''}`)
-    await interaction.followUp({ content: 'Command has been executed successfully.', ephemeral: true });
+    await interaction.followUp({ content: `GEXP from ${time} fetched.`, ephemeral: true });
   }
 }

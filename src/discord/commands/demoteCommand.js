@@ -16,7 +16,7 @@ module.exports = {
     const name = interaction.options.getString("name")
     if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
         bot.chat(`/g demote ${name}`); 
-        await interaction.followUp({ content: 'Command has been executed successfully.', ephemeral: true })
+        await interaction.followUp({ content: `${name} Demoted.`, ephemeral: true })
 
     } else {
         await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })

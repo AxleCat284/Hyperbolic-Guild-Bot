@@ -23,7 +23,7 @@ module.exports = {
     const reason = interaction.options.getString("reason")
     if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
         bot.chat(`/g kick ${name} ${reason}`); 
-        await interaction.followUp({ content: 'Command has been executed successfully.', ephemeral: true })
+        await interaction.followUp({ content: `${name} has been kicked from the guild for ${reason}`, ephemeral: true })
 
     } else {
         await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })

@@ -1,6 +1,6 @@
 {
   "minecraft": {
-    "prefix": "??",
+    "prefix": "!",
     "guildID": "5f6f85ba8ea8c99dcdd194d0",
     "guildExp": 10000,
     "messageRepeatBypass": false,
@@ -16,6 +16,7 @@
     "commandRole": "880893104767529050", 
     "managementRole": "995507976578281512",
     "qotdRole": "860018908370960474",
+    "qotdPING": "995347245346066584",
     "messageMode": "minecraft",
     "filterMessages": false,
     "joinMessage": true,
@@ -31,7 +32,8 @@
     "inactivity": "945477343235940372",
     "joinRequests": "1016109257298550914",
     "qotdChannel": "995345638571135157",
-    "strikeChannel": "1028779106453688361"
+    "strikeChannel": "1028779106453688361",
+    "suggestionChannel": "1028836071217311885"
   },
   "console": {
     "maxEventSize": 50000,
@@ -55,7 +57,7 @@
     "imgurAPIkey": "98ea6fff6d0ce73"
   },
   "event": {
-    "enabled": false,
+    "enabled": true,
     "notifiers": {
       "BANK_INTEREST": true,
       "DARK_AUCTION": true,

@@ -20,7 +20,7 @@ module.exports = {
         bot.chat(`/${command}`)
         const commandMessage = new EmbedBuilder()
             .setColor(2067276)
-            .setTitle('Command has been executed successfully')
+            .setTitle(`${command} executed.`)
             .setDescription(`\`/${command}\`\n`)
             .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
         await interaction.followUp({ embeds: [commandMessage], ephemeral: true  })

@@ -36,7 +36,7 @@ module.exports = {
               text: (`Hyperbolic Staff Team`),
           },
       };
-      if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
+      if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managementRole)) {
           await interaction.followUp({embeds: [discordlog] })
           client.users.send(`${user.id}`, {embeds: [dmlog] } );
       } else {

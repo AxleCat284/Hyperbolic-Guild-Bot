@@ -10,13 +10,13 @@ Made by Calculus#0001 and DuckySoLucky#5181 Edited by AxleWitch#9171
 
 - [ ] Discord
 
-- Config update for (QOTD, STRIKE, OTHERS)
 - Clean up stuff.
 - Timeout system with logs
 - echo
 - (maybe) Rewrite of database to offsite
 - updateroles
 - frog (frog images)
+- Timeout Command
 
 - [ ] Minecraft
 

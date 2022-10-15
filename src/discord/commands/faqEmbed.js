@@ -91,7 +91,11 @@ const staffapply = {
 };
 
 //allembeds
-interaction.followUp({ embeds: [ingameroles, mee6roles, irlstuff, staffapply] });
+if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managmentRole)) {
+        await interaction.followUp({ embeds: [ingameroles, mee6roles, irlstuff, staffapply] });
   
+	} else {
+		await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+	}
     },
   };

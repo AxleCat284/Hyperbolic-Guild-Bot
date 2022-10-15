@@ -1,6 +1,6 @@
 {
   "name": "hyperbolic-bridge",
-  "version": "3.7.1",
+  "version": "3.7.2",
   "description": "A Hypixel guild chat and Discord chat bridge",
   "main": "index.js",
   "scripts": {

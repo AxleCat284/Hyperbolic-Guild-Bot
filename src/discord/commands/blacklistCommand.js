@@ -19,16 +19,16 @@ module.exports = {
   ],
 
   execute: async (interaction, client) => {
-    if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
+    if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managmentRole)) {
         const name = interaction.options.getString("name")
         const arg = interaction.options.getString("arg")
 
         if (arg.toLowerCase() == "add") {
             bot.chat(`/ignore add ${name}`); 
-            await interaction.followUp({ content: 'Command has been executed successfully.', ephemeral: true })
+            await interaction.followUp({ content: `${name} added to the blacklist.`, ephemeral: true })
         } else if (arg.toLowerCase() == "remove") {
             bot.chat(`/ignore remove ${name}`); 
-            await interaction.followUp({ content: 'Command has been executed successfully.', ephemeral: true })
+            await interaction.followUp({ content: `${name} removed from the blacklist.`, ephemeral: true })
         } else {
             await interaction.followUp({ content: 'Invalid Usage: \`/ignore [add/remove] [name]\`.', ephemeral: true })
         }
