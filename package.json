@@ -1,6 +1,6 @@
 {
-  "name": "hypixel-discord-chat-bridge",
-  "version": "2.7",
+  "name": "hyperbolic-bridge",
+  "version": "3.7.1",
   "description": "A Hypixel guild chat and Discord chat bridge",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DuckySoLucky/hypixel-discord-chat-bridge.git"
+    "url": "git+https://github.com/AxleCat284/Hyperbolic-Guild-Bot.git"
   },
   "keywords": [
     "hypixel",

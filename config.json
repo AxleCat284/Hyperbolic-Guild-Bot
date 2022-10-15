@@ -13,7 +13,9 @@
     "guildChatChannel": "1030129749445578762",
     "officerChannel": "1016109111923966012",
     "loggingChannel": "1016109111923966012",
-    "commandRole": "880893104767529050",
+    "commandRole": "880893104767529050", 
+    "managementRole": "995507976578281512",
+    "qotdRole": "860018908370960474",
     "messageMode": "minecraft",
     "filterMessages": false,
     "joinMessage": true,
@@ -27,7 +29,9 @@
     "guildMember": "1022280710175871016",
     "guildLevel": "1022280736876810290",
     "inactivity": "945477343235940372",
-    "joinRequests": "1016109257298550914"
+    "joinRequests": "1016109257298550914",
+    "qotdChannel": "995345638571135157",
+    "strikeChannel": "1028779106453688361"
   },
   "console": {
     "maxEventSize": 50000,

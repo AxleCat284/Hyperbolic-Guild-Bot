@@ -49,9 +49,9 @@ module.exports = {
                 text: (`Hyperbolic Staff Team`),
             },
         };
-        if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
+        if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managementRole)) {
             await interaction.followUp({embeds: [discordlog] })
-            await client.channels.cache.get('1028779106453688361').send({embeds: [strikelog] })
+            await client.channels.cache.get(config.channels.strikeChannel).send({embeds: [strikelog] })
 
         } else {
             await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })

@@ -1,16 +1,35 @@
 # Hyperbolic Guild Bot
-Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic)<br />
+
+Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic) `<br />`
 
 Made by Calculus#0001 and DuckySoLucky#5181 Edited by AxleWitch#9171
+
 <hr>
 
 ### To-Do List
 
-- [ ] None
-  - Automated gexp checks
-  - more commands
-  - fixes to stuff
-  - more customization
+- [ ] Discord
+- Config update for (QOTD, STRIKE, OTHERS)
+- Clean up stuff.
+- Timeout system with logs
+- echo
+- (maybe) Rewrite of database to offsite
+- updateroles
+- frog (frog images)
+- [ ] Minecraft
+- !8ball fix
+- !denick fix
+- !stalk
+- !ban/!banfromguild
+- !warn
+- !strike
+- !report (reports users via the bot, basically chat macro and mass reporting but EH)
+
+- [ ] Website
+- 1.0 release
+
+- [ ] Other/misc
+- gexp checks (automatic)
 
 ### Credits
 
@@ -26,5 +45,4 @@ Made by Calculus#0001 and DuckySoLucky#5181 Edited by AxleWitch#9171
 - [SkyShiiyu API](https://github.com/SkyCryptWebsite/SkyCrypt)
 - [SlothPixel API](https://github.com/slothpixel)
 - [Senither](https://github.com/Senither)
-- DuckySoLucky, for the bot
-
+- DuckySoLucky, for the bot's original code

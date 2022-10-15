@@ -28,9 +28,9 @@ module.exports = {
         const question = interaction.options.getString("question")
         
 
-        if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
-            await client.channels.cache.get('995345638571135157').send({content: `<@&995347245346066584>\n**QOTD #${number}**\n\n${question} \n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nIf you have any suggestions for the next QOTD, post them in <#1028836071217311885>\nRemember to answer in the linked Thread!\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯` })
-            const channel = client.channels.cache.get('995345638571135157')
+        if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.qotdRole)) {
+            await client.channels.cache.get(config.channels.qotdChannel).send({content: `<@&995347245346066584>\n**QOTD #${number}**\n\n${question} \n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nIf you have any suggestions for the next QOTD, post them in <#1028836071217311885>\nRemember to answer in the linked Thread!\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯` })
+            const channel = client.channels.cache.get(config.channels.qotdChannel)
             const thread = await channel.threads.create({
                 name: (`QOTD ${number}`),
                 autoArchiveDuration: 60,
