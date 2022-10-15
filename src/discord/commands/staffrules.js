@@ -2,7 +2,7 @@
 const { EmbedBuilder, ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 
 module.exports = {
-    name: 'rulesembed',
+    name: 'staffrules',
     description: 'this is a private embed for the staff rules channel',
   
     execute: async (interaction, client) => {

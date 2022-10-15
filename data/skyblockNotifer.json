@@ -139,6 +139,10 @@
     "High latency for Europe connections | Monitoring - Our upstream provider has implemented a fix and we are monitoring. | Oct 3, 17:23 EDT",
     "High latency for Europe connections | Investigating - We are currently investigating an issue with our upstream provider resulting in higher latency for players in Europe. | Oct 3, 13:00 EDT",
     "SkyBlock Bazaar Disabled | Identified - The Bazaar is currently disabled due to exploits, we have identified the issue and are working to resolve it. | Sep 4, 16:57 EDT",
-    "SkyBlock Dungeons Disabled | Resolved - This incident has been resolved. | Sep 1, 11:41 EDT"
+    "SkyBlock Dungeons Disabled | Resolved - This incident has been resolved. | Sep 1, 11:41 EDT",
+    "1.14+ Join Issues | Resolved - This incident has been resolved. | Oct 14, 23:54 EDT",
+    "1.14+ Join Issues | Monitoring - A fix has been implemented and we are monitoring the results. | Oct 14, 23:32 EDT",
+    "1.14+ Join Issues | Identified - We have identified the cause that is blocking players in 1.14 and later to join the server and we are rolling out a fix as quickly as possible. | Oct 14, 23:00 EDT",
+    "1.14+ Join Issues | Investigating - We are currently investigating an issue where players in 1.14 and later may be unable to join the server | Oct 14, 22:56 EDT"
   ]
 }
