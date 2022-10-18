@@ -29,7 +29,7 @@ module.exports = {
         
 
         if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.qotdRole)) {
-            await client.channels.cache.get(config.channels.qotdChannel).send({content: `<@&${config.discord.qotdPING}>\n**QOTD #${number}**\n\n${question} \n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nIf you have any suggestions for the next QOTD, post them in ${config.channels.suggestionChannel}\nRemember to answer in the linked Thread!\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯` })
+            await client.channels.cache.get(config.channels.qotdChannel).send({content: `<@&${config.discord.qotdPING}>\n**QOTD #${number}**\n\n${question} \n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nIf you have any suggestions for the next QOTD, post them in <#${config.channels.suggestionChannel}>\nRemember to answer in the linked Thread!\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯` })
             const channel = client.channels.cache.get(config.channels.qotdChannel)
             const thread = await channel.threads.create({
                 name: (`QOTD ${number}`),
