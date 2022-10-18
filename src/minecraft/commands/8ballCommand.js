@@ -14,7 +14,7 @@ class eightBallCommand extends MinecraftCommand {
 
   onCommand(username, message) {
     try {
-      this.send(axios.get(`https://8ball.delegator.com/magic/JSON/${message}`)).data.magic.answer
+      this.send(`/gc I am unsure how to awnser this command right now, please check in later! -devs`)
     } catch (error) {
       console.log(error)
       this.send('/gc Something went wrong..')

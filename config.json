@@ -8,37 +8,37 @@
   },
   "discord": {
     "token": "",
-    "clientID": "1016094334099144714",
+    "clientID": "1014644571038285865",
     "serverID": "859982166673588246",
-    "guildChatChannel": "1030129749445578762",
-    "officerChannel": "1016109111923966012",
-    "loggingChannel": "1016109111923966012",
-    "commandRole": "880893104767529050", 
-    "managementRole": "995507976578281512",
-    "qotdRole": "860018908370960474",
-    "qotdPING": "995347245346066584",
+    "guildChatChannel": "1031366125432340510",
+    "officerChannel": "1031366156843503708",
+    "loggingChannel": "1031366173880762470",
+    "commandRole": "1031366032197173248", 
+    "managementRole": "1031366025427550312",
+    "qotdRole": "1031366033350602855",
+    "qotdPING": "1031366067953606686",
     "messageMode": "minecraft",
     "filterMessages": false,
     "joinMessage": true,
 
-    "linkedRole": "1017597161199894559",
-    "guildMemberRole": "860018913906393109",
-    "eliteRole": "860018916624302130",
-    "noviceRole": "860683429887737896"
+    "linkedRole": "1031366062257741905",
+    "guildMemberRole": "1031366060953313340",
+    "eliteRole": "1031724050852085801",
+    "noviceRole": "1031366063516028948"
   },
   "channels": {
-    "guildMember": "1022280710175871016",
-    "guildLevel": "1022280736876810290",
-    "inactivity": "945477343235940372",
-    "joinRequests": "1016109257298550914",
-    "qotdChannel": "995345638571135157",
-    "strikeChannel": "1028779106453688361",
-    "suggestionChannel": "1028836071217311885"
+    "guildMember": "1031366071669772328",
+    "guildLevel": "1031366072965791841",
+    "inactivity": "1031366114061590579",
+    "joinRequests": "1031366155492929546",
+    "qotdChannel": "1031366109670166599",
+    "strikeChannel": "1031366153827782686",
+    "suggestionChannel": "1031366119975563294"
   },
   "console": {
     "maxEventSize": 50000,
     "debug": true,
-    "debugChannel": "1015367075469996112"
+    "debugChannel": "1031366186044235837"
   },
   "api": {
     "hypixelAPI": "https://api.hypixel.net",
