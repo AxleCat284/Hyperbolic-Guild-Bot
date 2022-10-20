@@ -308,15 +308,6 @@ class StateHandler extends EventHandler {
       })
     }
 
-    if (this.isRepeatMessage(message)) {
-      return client.channels.cache.get(bridgeChat).send({
-        embeds: [{
-          color: 15548997,
-          description: `${messages.repeatMessage}`,
-        }]
-      })
-    }
-
     if (this.isNoPermission(message)) {
       return this.minecraft.broadcastCleanEmbed({ 
         message: `${messages.noPermissionMessage}`, 
@@ -650,10 +641,6 @@ class StateHandler extends EventHandler {
 
   isBlockedMessage(message) {
     return message.includes('We blocked your comment') && !message.includes(':')
-  }
-
-  isRepeatMessage(message) {
-    return message == 'You cannot say the same message twice!'
   }
 
   isNoPermission(message) {
