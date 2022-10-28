@@ -1,6 +1,8 @@
+
 const express = require('express');
+const chalk = require ('chalk');
 const server = express();
-server.listen(1439, () => { console.log("Web Server is Ready!") });
+server.listen(1439, () => { console.log(chalk.bold.cyanBright.cyan`Web Server is Ready!`) });
  
 server.all('/', (req, res) => {
   res.send(` `)
@@ -11,9 +13,7 @@ server.all('/', (req, res) => {
 /*
 var http = require('http');
 var fs = require('fs');
-
 const PORT=1382; 
-
 fs.readFile('./src/web/index.html', function (err, html) {
     if (err) throw err;    
     http.createServer(function(request, response) {  

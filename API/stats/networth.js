@@ -2,13 +2,14 @@ const itemGenerator = require("../constants/maro_networth/generators/itemGenerat
 const networthGenerator = require("../constants/maro_networth/generators/networthGenerator");
 const config = require("../config.json");
 const fs = require("fs");
+const chalk = require ('chalk');
 
 let prices = {};
 
 const retrievePrices = async function () {
   prices = JSON.parse(fs.readFileSync("API/data/prices.json"));
   if (config.prices.refreshMessage)
-    console.log("Prices retrieved successfully");
+    console.log(chalk.hex('e0bb00').underline`$$ 💰 Prices retrieved successfully 💰 $$`);
 };
 
 retrievePrices();
