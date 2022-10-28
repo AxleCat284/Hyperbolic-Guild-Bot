@@ -1,12 +1,13 @@
 const { EmbedBuilder, ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 const config = require('../../../config.json')
+const ms = require("ms");
 //
 module.exports = {
     name: 'timeout',
-    description: 'times a user out than logs it',
+    description: 'Times out a member and then logs it',
     options: [
         {
-            name: 'user',
+            name: 'member',
             description: 'discord Username',
             type: 6,
             required: true
@@ -30,33 +31,35 @@ module.exports = {
 //
 //
 
-        const user = interaction.options.getUser("user")
+        const member = interaction.options.getMember("member")
         const reason = interaction.options.getString("reason")
-        const time = interaction.options.getString("time")*86400
+        const time = interaction.options.getString("time")
+        const timeMS = ms(time)
+
 
           
         const timeoutlog = {
             title: 'Timeout Log',
-            description: (`**${user}** was timed out for reason **${reason}**, they are timed out for ${time}!`),
+            description: (`**${member} Was Timed Out!**\n\n**Reason:** ${reason}\n**Time:** ${time}\n\n**ID:** ${member.id}`),
             timestamp: new Date().toISOString(),
             footer: {
                 text: (`Hyperbolic Staff Team`),
             },
         };
         const discordlog = {
-            title: 'timeout',
-            description: (`${user} was Timed out!`),
+            title: 'Timeout',
+            description: (`${member} was timed out for **${time}**!`),
             timestamp: new Date().toISOString(),
             footer: {
                 text: (`Hyperbolic Staff Team`),
             },
         };
-        if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
-            await interaction.followUp({embeds: [discordlog] })
-            await this.guild.member.fetch({ user: `${user.id}`});
-            await user.timeout.member(`${user.id}`),(`${time}`, 'They deserved it')
-            await client.channels.cache.get(config.channels.strikeChannel).send({embeds: [timeoutlog] })
 
+        if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
+
+            await member.timeout(timeMS, `${reason}`);
+            await interaction.followUp({embeds: [discordlog] })
+            await client.channels.cache.get(config.channels.timeoutChannel).send({embeds: [timeoutlog] })
         } else {
             await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
         }
