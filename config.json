@@ -1,4 +1,4 @@
-{
+{ 
   "minecraft": {
     "prefix": "!",
     "guildID": "5f6f85ba8ea8c99dcdd194d0",
@@ -34,7 +34,8 @@
     "qotdChannel": "1031366109670166599",
     "strikeChannel": "1031366153827782686",
     "rulesChannel": "860034326719627305",
-    "suggestionChannel": "1031366119975563294"
+    "timeoutChannel": "1035396615059542046",
+    "suggestionChannel": "1031366109670166599"
   },
   "console": {
     "maxEventSize": 50000,
