@@ -8,7 +8,7 @@ const verifyEmbed = new EmbedBuilder()
     .setColor(15548997)
     .setAuthor({ name: 'An Error has occurred'})
     .setDescription(`This player is not linked. Use \`/overideverify\` `)
-    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+    .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
 
 
 module.exports = {
@@ -67,7 +67,7 @@ module.exports = {
                                     .setColor(15548997)
                                     .setAuthor({ name: 'An Error has occurred'})
                                     .setDescription(`${username} is not in the guild.`)
-                                    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                                    .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                                 await interaction.followUp({embeds: [errorEmbed] });
                                 return;
                             }
@@ -77,7 +77,7 @@ module.exports = {
                                 .setAuthor({ name: 'Inactivity request.'})
                                 .setThumbnail(`https://www.mc-heads.net/avatar/${username}`) 
                                 .setDescription(`\`Username:\` ${username}\n\`Requested:\` <t:${toFixed(new Date().getTime()/1000, 0)}>\n\`Expiration:\` <t:${toFixed(expiration, 0)}:R>\n\`Reason:\` ${reason}`)
-                                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                                .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                             await client.channels.cache.get(`${config.channels.inactivity}`).send({ embeds: [inactivityEmbed] });
                             
                             await writeAt('data/guildKickImmunity.json', `${uuid}.data`, [`${toFixed(expiration, 0)}`, `${id}`, `${username}`])
@@ -86,7 +86,7 @@ module.exports = {
                                 .setColor(5763719)
                                 .setAuthor({ name: 'Inactivity request.'})
                                 .setDescription(`Successfully created inactivity request for \`${username}\`.`)
-                                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                                .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                             await interaction.followUp({ embeds: [ inactivityResponse ] });
                         })
                 } else {
@@ -94,7 +94,7 @@ module.exports = {
                         .setColor(15548997)
                         .setAuthor({ name: 'An Error has occurred'})
                         .setDescription(`You cannot take break longer than 14 Days.`)
-                        .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                        .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                     await interaction.followUp({ embeds: [errorEmbed] });
                 }
             } else {
@@ -102,7 +102,7 @@ module.exports = {
                     .setColor(15548997)
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(`You do not have permission to run this command.`)
-                    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                    .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                 interaction.followUp({ embeds: [errorEmbed] });  
             }
         } catch (error) {
@@ -110,7 +110,7 @@ module.exports = {
                 .setColor(15548997)
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
-                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
             await interaction.followUp({ embeds: [errorEmbed] });
         }
     },

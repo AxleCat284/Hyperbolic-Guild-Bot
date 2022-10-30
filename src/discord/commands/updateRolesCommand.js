@@ -96,7 +96,7 @@ module.exports = {
                             .setColor(5763719)
                             .setAuthor({ name: 'Successfully completed'})
                             .setDescription(`Roles have been successfully updated!`)
-                            .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                            .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                         await interaction.followUp({ embeds: [ updateRole ] });
                     })
                 })
@@ -105,7 +105,7 @@ module.exports = {
                     .setColor(15548997)
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(`You must link your account using \`/verify\` before using this command.`)
-                    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                    .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
                 await interaction.followUp({ embeds: [ verifyEmbed ] });
             }
         } catch(error) {
@@ -113,7 +113,7 @@ module.exports = {
                 .setColor(15548997)
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
-                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
             interaction.followUp({ embeds: [errorEmbed] });
         }
     },

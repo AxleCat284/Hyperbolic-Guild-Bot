@@ -10,7 +10,7 @@ module.exports = {
             .setColor(0x0099FF)
             .setTitle("🕐 Uptime!")
             .setDescription(`Online since <t:${toFixed(uptime/1000, 0)}:R>`)
-            .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
+            .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
 
         interaction.followUp({ embeds: [ uptimeEmbed ] })
     }

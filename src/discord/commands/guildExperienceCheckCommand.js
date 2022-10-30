@@ -16,7 +16,7 @@ module.exports = {
                     .setColor('#ff0000')
                     .setAuthor({ name: 'An Error has occured!'})
                     .setDescription(`You do not have permission to use this command!`)
-                    .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
+                    .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
                 await interaction.reply({ embeds: [permissionEmbed] });
                 return;
             }
@@ -88,7 +88,7 @@ module.exports = {
                 .setColor(15548997)
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
-                .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
+                .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
             await interaction.followUp({ embeds: [errorEmbed] });
         }
     },

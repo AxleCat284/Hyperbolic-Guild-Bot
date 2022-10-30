@@ -22,7 +22,7 @@ module.exports = {
             .setColor(2067276)
             .setTitle(`${command} executed.`)
             .setDescription(`\`/${command}\`\n`)
-            .setFooter({ text: `Made by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
+            .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
         await interaction.followUp({ embeds: [commandMessage], ephemeral: true  })
 
     } else {
