@@ -1,39 +1,39 @@
-# Hyperbolic Guild Bot
+# Hypixel Discord Bot :sparkles:Enhanced:sparkles:
 
-Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic) `<br />`
-
-Made by Calculus#0001 and DuckySoLucky#5181 Edited by AxleWitch#9171
-
+Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic)
+Made By
+- Calculus#0001
+- DuckySoLucky#5181
+- AxleWitch#9171
+- Kathhud#2004
 <hr>
 
 ### To-Do List
 
 - [ ] Discord
-
-- Clean up stuff.
-- Timeout system with logs
-- echo
 - (maybe) Rewrite of database to offsite
 - updateroles
 - frog (frog images)
-- Timeout Command
+-
 
 - [ ] Minecraft
 
-- !8ball fix
 - !stalk
 - !ban/!banfromguild
-- !warn
-- !strike
-- !report (reports users via the bot, basically chat macro and mass reporting but EH)
-
-- [ ] Website
-
+- !report (reports users via the bot, basically chat macro and mass reporting but EH Website
 - 1.0 release
 
+- [ ] Oath2
+- setup and intergration into website for verification
 - [ ] Other/misc
 
 - gexp checks (automatic)
+
+- [ ] Github
+- Docs
+- Install info 
+- fixing .gitignore to work with config.js so I stop wiping my token :sob:
+
 
 ### Credits
 
@@ -49,4 +49,6 @@ Made by Calculus#0001 and DuckySoLucky#5181 Edited by AxleWitch#9171
 - [SkyShiiyu API](https://github.com/SkyCryptWebsite/SkyCrypt)
 - [SlothPixel API](https://github.com/slothpixel)
 - [Senither](https://github.com/Senither)
-- DuckySoLucky, for the bot's original code
+- [Kathhub](https://github.com/Kathund)
+- [DuckySoLucky](https://github.com/Kathund)
+- [Emmaexe](https://github.com/emmaexe/guildbot)
