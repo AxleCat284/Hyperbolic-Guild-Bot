@@ -7,6 +7,7 @@ const { getUUID } = require('../../contracts/API/PlayerDBAPI')
 const EventHandler = require('../../contracts/EventHandler')
 const getWeight = require('../../../API/stats/weight')
 const messages = require('../../../messages.json')
+const { EmbedBuilder } = require('discord.js')
 const config = require('../../../config.json')
 const Logger = require('../../Logger')
 const fs = require('fs')
@@ -64,11 +65,13 @@ class StateHandler extends EventHandler {
 
     if (this.isRequestMessage(message)) {
       let username = replaceAllRanks(message.split('has')[0].replaceAll('-----------------------------------------------------\n', ''))
+      const uuid = await getUUID(username);
       if (config.guildRequirement.enabled) {
         const [player, profile] = await Promise.all([
           hypixel.getPlayer(uuid),
           getLatestProfile(uuid)
         ])
+        let meetRequirements = false;
 
         const weight = (await getWeight(profile.profile, profile.uuid)).weight.senither.total
 
@@ -110,7 +113,7 @@ class StateHandler extends EventHandler {
                 { name: 'Senither Weight', value: `${addCommas(toFixed((weight), 2))}`, inline: true },
             )
             .setThumbnail(`https://www.mc-heads.net/avatar/${player.nickname}`) 
-            .setFooter({ text: `by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
+            .setFooter({ text: `by DuckySoLucky#5181 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
   
           await client.channels.cache.get(`${config.discord.loggingChannel}`).send({ embeds: [statsEmbed] });   
         }
@@ -162,7 +165,7 @@ class StateHandler extends EventHandler {
   
 
     if (this.isLoginMessage(message)) {
-      var data = JSON.parse(fs.readFileSync('config.json'));
+      let data = JSON.parse(fs.readFileSync('config.json'));
       if (data.discord.joinMessage) { 
         let user = message.split('>')[1].trim().split('joined.')[0].trim()
         return this.minecraft.broadcastPlayerToggle({ 
@@ -176,7 +179,7 @@ class StateHandler extends EventHandler {
     }
 
     if (this.isLogoutMessage(message)) {
-      var data = JSON.parse(fs.readFileSync('config.json'));
+      let data = JSON.parse(fs.readFileSync('config.json'));
       if (data.discord.joinMessage) { 
         let user = message.split('>')[1].trim().split('left.')[0].trim()
         return this.minecraft.broadcastPlayerToggle({ 
@@ -192,7 +195,7 @@ class StateHandler extends EventHandler {
     if (this.isJoinMessage(message)) {
       let user = message.replace(/\[(.*?)\]/g, '').trim().split(/ +/g)[0]
       await delay(1000)
-      bot.chat('/gc Welcome to the guild! Make sure to join our discord /g discord! To view my commands run !help, Have a nice day :D | By AxleWitch#9171')
+      bot.chat(`/gc ${messages.guildJoinMessage} | By DuckySoLucky#5181`)
       return [this.minecraft.broadcastHeadedEmbed({
         message: `${user} ${messages.joinMessage}`,
         title: `Member Joined`,
@@ -210,16 +213,6 @@ class StateHandler extends EventHandler {
 
     if (this.isLeaveMessage(message)) {
       let user = message.replace(/\[(.*?)\]/g, '').trim().split(/ +/g)[0]
-      try {
-        await delay(500)
-        bot.chat('/gc RIP Bozo L')
-        const linked = require('../../../data/minecraftLinked.json')
-        const uuid = await getUUID(user)
-        if (linked?.[uuid]?.data[0]) {
-            const member = await guild.members.fetch(linked?.[uuid]?.data[0])
-            member.roles.remove(config.discord.guildMemberRole)
-        }
-      } catch(error) {}
 
       return [this.minecraft.broadcastHeadedEmbed({
         message: `${user} ${messages.leaveMessage}`,
@@ -238,14 +231,7 @@ class StateHandler extends EventHandler {
 
     if (this.isKickMessage(message)) {
       let user = message.replace(/\[(.*?)\]/g, '').trim().split(/ +/g)[0]
-      try {
-        const linked = require('../../../data/minecraftLinked.json')
-        const uuid = await getUUID(user)
-        if (linked?.[uuid]?.data[0]) {
-            const member = await guild.members.fetch(linked?.[uuid]?.data[0])
-            member.roles.remove(config.discord.guildMemberRole)
-        }
-      } catch(error) {}
+
       return [this.minecraft.broadcastHeadedEmbed({
         message: `${user} ${messages.kickMessage}`,
         title: `Member Kicked`,
@@ -302,9 +288,18 @@ class StateHandler extends EventHandler {
     if (this.isBlockedMessage(message)) {
       let blockedMsg = message.match(/".+"/g)[0].slice(1, -1)
       return this.minecraft.broadcastCleanEmbed({ 
-        message: `${messages.blockedMessageFirst} ${blockedMsg} ${blockedMessageSecond}`, 
+        message: `${messages.blockedMessageFirst} ${blockedMsg} ${messages.blockedMessageSecond}`, 
         color: 15548997, 
         channel: 'Guild' 
+      })
+    }
+
+    if (this.isRepeatMessage(message)) {
+      return client.channels.cache.get(bridgeChat).send({
+        embeds: [{
+          color: 15548997,
+          description: `${messages.repeatMessage}`,
+        }]
       })
     }
 
@@ -546,7 +541,7 @@ class StateHandler extends EventHandler {
     let chatType = chat.shift().trim()
     let userParts = group.split(' ')
     let username = userParts[userParts.length - (hasRank ? 2 : 1)]
-    let guildRank = userParts[userParts.length - 1].replace(/[\[\]]/g, '')
+    let guildRank = userParts[userParts.length - 1].replace('[', '').replace(']', '')
     const playerMessage = parts.join(':').trim()
 
     if (!this.isGuildMessage(message) && !this.isOfficerChatMessage(message)) return
@@ -590,10 +585,6 @@ class StateHandler extends EventHandler {
 
   isGuildQuestCompletion(message) {
     return message.includes('GUILD QUEST TIER ') && message.includes('COMPLETED') && !message.includes(':')
-  }
-
-  isPartyMessage(message) {
-    return message.startsWith('Party >')
   }
 
   isLoginMessage(message) {
@@ -641,6 +632,10 @@ class StateHandler extends EventHandler {
 
   isBlockedMessage(message) {
     return message.includes('We blocked your comment') && !message.includes(':')
+  }
+
+  isRepeatMessage(message) {
+    return message == 'You cannot say the same message twice!'
   }
 
   isNoPermission(message) {

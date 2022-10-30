@@ -16,18 +16,19 @@ class guildExperienceCommand extends MinecraftCommand {
     onCommand(username, message) {
         let arg = this.getArgs(message);
         if (arg[0]) username = arg[0]
+
         try {
             const [player, guild] = Promise.all([
                 hypixel.getPlayer(username),
-                getGuild("id", config.minecraft.guildID)
+                hypixel.getGuild("id", "5f6f85ba8ea8c99dcdd194d0")
             ])
 
             for (const member of guild.members) {
                 if (member.uuid != player.uuid) continue;
 
-                if (i == guild.members.length - 1) return this.send(`/gc ${username} is not in the Guild.`)
+                if (guild.members.indexOf(member) == guild.members.length - 1) return this.send(`/gc ${username} is not in the Guild.`)
                 
-                return this.send(`/gc ${username == arg[0] ? `${arg[0]}'s` : `Your`} Weekly Guild Experience » ${addCommas(member.weeklyExperience)}.`)
+                return this.send(`/gc ${username == arg[0] ? `${arg[0]}'s` : `Your`} Weekly Guild Experience » ${member.weeklyExperience}.`)
             }
         } catch (error) {
             console.log(error)
@@ -36,4 +37,4 @@ class guildExperienceCommand extends MinecraftCommand {
     }    
 }
 
-module.exports = guildExperienceCommand;
+module.exports = guildExperienceCommand

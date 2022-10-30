@@ -1,35 +1,19 @@
-const itemGenerator = require("../constants/maro_networth/generators/itemGenerator");
-const networthGenerator = require("../constants/maro_networth/generators/networthGenerator");
+const { getNetworth, getPrices } = require("skyhelper-networth")
 const config = require("../config.json");
-const fs = require("fs");
 const chalk = require ('chalk');
 
 let prices = {};
 
 const retrievePrices = async function () {
-  prices = JSON.parse(fs.readFileSync("API/data/prices.json"));
+  prices = await getPrices();
   if (config.prices.refreshMessage)
+  
     console.log(chalk.hex('e0bb00').underline`$$ 💰 Prices retrieved successfully 💰 $$`);
 };
 
 retrievePrices();
-setInterval(() => retrievePrices(), 60 * 10000);
+setInterval(() => retrievePrices(), 15 * 1000 * 60); //
 
 module.exports = async (profile, profileData) => {
-  const bank = profileData?.banking?.balance || 0;
-  const items = await itemGenerator.getItems(profile, prices);
-  if (items.no_inventory) return { no_inventory: true };
-
-  const networth = await networthGenerator.getNetworth(items, profile, bank);
-  if (Object.keys(networth.categories).length < 0)
-    return { no_inventory: true };
-
-  return {
-    total_networth: networth.networth,
-    unsoulbound_networth: networth.unsoulbound_networth,
-    purse: networth.purse,
-    bank: networth.bank,
-    personal_bank: networth.personal_bank,
-    types: networth.categories,
-  };
+  return await (getNetworth(profile, profileData.banking?.balance || 0, prices));
 };
