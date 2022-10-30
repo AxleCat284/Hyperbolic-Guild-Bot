@@ -1,20 +1,23 @@
-# Hypixel Discord Bot :sparkles:Enhanced:sparkles:
+# Hypixel Discord Bot ✨Enhanced✨
 
 Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic)
 Made By
+
 - Calculus#0001
 - DuckySoLucky#5181
 - AxleWitch#9171
-- Kathhud#2004
+- **Kathund**#2004
+
 <hr>
 
 ### To-Do List
 
 - [ ] Discord
+
 - (maybe) Rewrite of database to offsite
 - updateroles
 - frog (frog images)
--
+- 
 
 - [ ] Minecraft
 
@@ -24,19 +27,18 @@ Made By
 - 1.0 release
 
 - [ ] Oath2
+
 - setup and intergration into website for verification
+
 - [ ] Other/misc
 
 - gexp checks (automatic)
 
 - [ ] Github
+
 - Docs
-- Install info 
-- fixing .gitignore to work with config.js so I stop wiping my token :sob:
-
-
-### Credits
-
+- Install info
+- fixing .gitignore to work with config.js so I stop wiping my token 😭Credits
 - [AltPapier](https://github.com/Altpapier/hypixel-discord-guild-bridge)
 - [DawJaw](https://dawjaw.net/jacobs)
 - [Discord.js](https://discord.js.org/)
