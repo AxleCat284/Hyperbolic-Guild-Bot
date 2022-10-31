@@ -23,10 +23,10 @@ module.exports = {
     const time = interaction.options.getString("time")
     if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
         bot.chat(`/g mute ${name} ${time}`); 
-        await interaction.reply({ content: `${name} has been muted for ${time}.`, ephemeral: true })
+        await interaction.reply({ content: `${name} has been muted for ${time}.`, ephemeral: false })
 
     } else {
-        await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+        await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false })
     }
   }
 }

@@ -54,7 +54,7 @@ module.exports = {
             await client.channels.cache.get(config.channels.strikeChannel).send({embeds: [strikelog] })
 
         } else {
-            await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+            await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false })
         }
       }
     }

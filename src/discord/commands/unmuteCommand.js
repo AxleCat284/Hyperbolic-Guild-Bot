@@ -16,10 +16,10 @@ module.exports = {
     const name = interaction.options.getString("name")
     if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
         bot.chat(`/g unmute ${name}`); 
-        await interaction.reply({ content: 'Command has been executed successfully.', ephemeral: true })
+        await interaction.reply({ content: `${name} has been unmuted!`, ephemeral: false })
 
     } else {
-        await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+        await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false })
     }
   }
 }

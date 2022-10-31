@@ -40,7 +40,7 @@ module.exports = {
           await interaction.reply({embeds: [discordlog], ephemeral: false })
           client.users.send(`${user.id}`, {embeds: [dmlog] } );
       } else {
-          await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+          await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false })
       }
     }
   }

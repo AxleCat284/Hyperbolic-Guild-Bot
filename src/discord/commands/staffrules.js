@@ -22,7 +22,7 @@ if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(co
         await interaction.reply({ embeds: [staffrules] });
   
 	} else {
-		await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+		await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false })
 	}
     },
   };

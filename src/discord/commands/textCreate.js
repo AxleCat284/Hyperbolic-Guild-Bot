@@ -14,13 +14,8 @@ module.exports = {
 
         
       ],
-  
     execute: async (interaction, client, InteractionCreate) => {
-
- 
-
-
-    
+  
   if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managementRole)) {
 
     let message = interaction.options.getString('message').replaceAll('\\n', '\n')
@@ -32,12 +27,6 @@ module.exports = {
       ephemeral: true
   })
   
-
-
-    
-    
-
-
 
 } else {
     interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false})

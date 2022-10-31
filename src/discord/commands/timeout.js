@@ -61,7 +61,7 @@ module.exports = {
             await interaction.reply({embeds: [discordlog] })
             await client.channels.cache.get(config.channels.timeoutChannel).send({embeds: [timeoutlog] })
         } else {
-            await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+            await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false })
         }
       }
     }

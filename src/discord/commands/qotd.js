@@ -46,7 +46,7 @@ module.exports = {
             };
             await interaction.reply({embeds: [reply] })
         } else {
-            await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+            await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false })
         }
       }
     }
