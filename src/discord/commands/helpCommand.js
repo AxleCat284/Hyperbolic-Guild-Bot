@@ -53,7 +53,7 @@ module.exports = {
                     { name: '**Discord**: ', value: `${discordCommands}`, inline: true },
                 )
                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
-            await interaction.followUp({ embeds: [helpMenu] })
+            await interaction.reply({ embeds: [helpMenu] })
         } else {
             let options = '', found = false;
             // Discord Commands
@@ -69,7 +69,7 @@ module.exports = {
                             .setTitle(`**${config.minecraft.prefix}${command.name}**`)
                             .setDescription(description + '\n')
                             .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
-                        await interaction.followUp({ embeds: [commandData] })
+                        await interaction.reply({ embeds: [commandData] })
                         break;
                     } 
                     for (let i = 0; i < command.options.length; i++) {
@@ -86,7 +86,7 @@ module.exports = {
                                 { name: '**Options** ', value: `${options}`, inline: true },
                             )
                             .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
-                        await interaction.followUp({ embeds: [commandData] })
+                        await interaction.reply({ embeds: [commandData] })
                         break;
                     }
                 }  
@@ -103,7 +103,7 @@ module.exports = {
                             .setTitle(`**${config.minecraft.prefix}${minecraftCommandList[i].name}**`)
                             .setDescription(description + '\n')
                             .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
-                        await interaction.followUp({ embeds: [commandData] })
+                        await interaction.reply({ embeds: [commandData] })
                         break;
                     } else {
                         for (let j = 0; j < minecraftCommandList[i].options.length; j++)  {
@@ -118,7 +118,7 @@ module.exports = {
                             { name: '**Options** ', value: `${options}`, inline: true },
                         )
                         .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
-                    await interaction.followUp({ embeds: [commandData] })
+                    await interaction.reply({ embeds: [commandData] })
                     break;
                 }
             }
@@ -128,7 +128,7 @@ module.exports = {
                 .setTitle('Error')
                 .setDescription(`Command \`${commandName}\` was not found`)
                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
-            await interaction.followUp({ embeds: [errorEmbed] })
+            await interaction.reply({ embeds: [errorEmbed] })
         }
     }
 }

@@ -4,7 +4,7 @@ module.exports = {
   
     execute: async (interaction, client) => {
         bot.chat(`/g online`)
-        await interaction.followUp({ content: 'Done.', ephemeral: true });
+        await interaction.reply({ content: 'Done.', ephemeral: true });
     }
   }
   

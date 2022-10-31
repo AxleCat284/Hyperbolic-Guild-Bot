@@ -79,7 +79,7 @@ module.exports = {
                     );
 
                 await interaction.editReply({ files: [ "data/exp.txt" ], content: "**Weekly Guild Experience**"})
-                await interaction.followUp({ files: [ "data/filteredExp.txt" ], content: `**Weekly Guild Experience** (${config.minecraft.guildExp})`, components: [selectMenu, kickButton] })
+                await interaction.reply({ files: [ "data/filteredExp.txt" ], content: `**Weekly Guild Experience** (${config.minecraft.guildExp})`, components: [selectMenu, kickButton] })
 
 
             }).catch((error)=>{console.log(error)});
@@ -89,7 +89,7 @@ module.exports = {
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-            await interaction.followUp({ embeds: [errorEmbed] });
+            await interaction.reply({ embeds: [errorEmbed] });
         }
     },
   };

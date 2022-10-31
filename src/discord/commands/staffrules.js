@@ -19,10 +19,10 @@ const staffrules = {
 };
 
 if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managmentRole)) {
-        await interaction.followUp({ embeds: [staffrules] });
+        await interaction.reply({ embeds: [staffrules] });
   
 	} else {
-		await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+		await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
 	}
     },
   };

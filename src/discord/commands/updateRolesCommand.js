@@ -97,7 +97,7 @@ module.exports = {
                             .setAuthor({ name: 'Successfully completed'})
                             .setDescription(`Roles have been successfully updated!`)
                             .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                        await interaction.followUp({ embeds: [ updateRole ] });
+                        await interaction.reply({ embeds: [ updateRole ] });
                     })
                 })
             } else {
@@ -106,7 +106,7 @@ module.exports = {
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(`You must link your account using \`/verify\` before using this command.`)
                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                await interaction.followUp({ embeds: [ verifyEmbed ] });
+                await interaction.reply({ embeds: [ verifyEmbed ] });
             }
         } catch(error) {
             const errorEmbed = new EmbedBuilder()
@@ -114,7 +114,7 @@ module.exports = {
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-            interaction.followUp({ embeds: [errorEmbed] });
+            interaction.reply({ embeds: [errorEmbed] });
         }
     },
   };

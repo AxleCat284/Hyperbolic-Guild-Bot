@@ -25,16 +25,16 @@ module.exports = {
 
         if (arg.toLowerCase() == "add") {
             bot.chat(`/ignore add ${name}`); 
-            await interaction.followUp({ content: `${name} added to the blacklist.`, ephemeral: true })
+            await interaction.reply({ content: `${name} added to the blacklist.`, ephemeral: true })
         } else if (arg.toLowerCase() == "remove") {
             bot.chat(`/ignore remove ${name}`); 
-            await interaction.followUp({ content: `${name} removed from the blacklist.`, ephemeral: true })
+            await interaction.reply({ content: `${name} removed from the blacklist.`, ephemeral: true })
         } else {
-            await interaction.followUp({ content: 'Invalid Usage: \`/ignore [add/remove] [name]\`.', ephemeral: true })
+            await interaction.reply({ content: 'Invalid Usage: \`/ignore [add/remove] [name]\`.', ephemeral: true })
         }
 
     } else {
-        await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+        await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
     }
   }
 }

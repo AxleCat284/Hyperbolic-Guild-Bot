@@ -23,10 +23,10 @@ module.exports = {
             .setTitle(`${command} executed.`)
             .setDescription(`\`/${command}\`\n`)
             .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
-        await interaction.followUp({ embeds: [commandMessage], ephemeral: true  })
+        await interaction.reply({ embeds: [commandMessage], ephemeral: true  })
 
     } else {
-        await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+        await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
     }
   }
 }

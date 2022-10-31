@@ -20,7 +20,7 @@ module.exports = {
         try {
             let meetRequirements = false
             const uuid = linked?.[interaction.user.id]?.data[0] ?? null
-            if (!uuid) return interaction.followUp({ embeds: [verifyEmbed] });
+            if (!uuid) return interaction.reply({ embeds: [verifyEmbed] });
 
             const [player, profile] = await Promise.all([
                 hypixel.getPlayer(uuid),
@@ -55,7 +55,7 @@ module.exports = {
                     .setAuthor({ name: 'Guild Application.'})
                     .setDescription(`Guild Application has been successfully sent to the guild staff.`)
                     .setFooter({ text: `by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
-                interaction.followUp({ embeds: [applicationEmbed] })
+                interaction.reply({ embeds: [applicationEmbed] })
 
                 const statsEmbed = new EmbedBuilder()
                     .setColor(2067276)
@@ -80,7 +80,7 @@ module.exports = {
                     .setAuthor({ name: 'An Error has occurred!'})
                     .setDescription(`You do not meet requirements.`)
                     .setFooter({ text: `by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
-                interaction.followUp({ embeds: [errorEmbed] });
+                interaction.reply({ embeds: [errorEmbed] });
             }
         } catch (error) {
             const errorEmbed = new EmbedBuilder()
@@ -88,7 +88,7 @@ module.exports = {
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
                 .setFooter({ text: `by AxleWitch#9171 | /help [command] for more information`, iconURL: 'https://imgur.com/tgwQJTX.png' });
-            interaction.followUp({ embeds: [errorEmbed] });
+            interaction.reply({ embeds: [errorEmbed] });
         }
     },
 }

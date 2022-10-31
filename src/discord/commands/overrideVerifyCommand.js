@@ -37,7 +37,7 @@ module.exports = {
                     .setAuthor({ name: 'Successfully linked!'})
                     .setDescription(`\`${username}\` has been successfully linked to \`${(await interaction.guild.members.fetch(id)).user.username}#${(await interaction.guild.members.fetch(id)).user.discriminator}\``)
                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                await interaction.followUp({ embeds: [successfullyLinked] });
+                await interaction.reply({ embeds: [successfullyLinked] });
 
 
             } catch(error) {
@@ -46,7 +46,7 @@ module.exports = {
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(error)
                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                interaction.followUp({ embeds: [errorEmbed] });
+                interaction.reply({ embeds: [errorEmbed] });
             }
         } else {
             const errorEmbed = new EmbedBuilder()
@@ -54,7 +54,7 @@ module.exports = {
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(`You do not have permission to run this command.`)
                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-            interaction.followUp({ embeds: [errorEmbed] });  
+            interaction.reply({ embeds: [errorEmbed] });  
         }
     },
   };

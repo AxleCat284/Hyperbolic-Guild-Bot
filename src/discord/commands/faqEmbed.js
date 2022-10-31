@@ -92,10 +92,10 @@ const staffapply = {
 
 //allembeds
 if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managmentRole)) {
-        await interaction.followUp({ embeds: [ingameroles, mee6roles, irlstuff, staffapply] });
+        await interaction.reply({ embeds: [ingameroles, mee6roles, irlstuff, staffapply] });
   
 	} else {
-		await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+		await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
 	}
     },
   };

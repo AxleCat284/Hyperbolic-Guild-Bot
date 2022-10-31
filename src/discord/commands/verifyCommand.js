@@ -30,7 +30,7 @@ module.exports = {
                         .setAuthor({ name: 'Successfully linked!'})
                         .setDescription(`Your account has been successfully linked to \`${username}\``)
                         .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                    await interaction.followUp({ embeds: [successfullyLinked] });
+                    await interaction.reply({ embeds: [successfullyLinked] });
                         
                 } else {
                     const verificationTutorialEmbed = new EmbedBuilder()
@@ -40,7 +40,7 @@ module.exports = {
                         .setThumbnail('https://thumbs.gfycat.com/DentalTemptingLeonberger-size_restricted.gif') 
                         .setTimestamp()
                         .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                    await interaction.followUp({ content: 'Your Minecraft\'s linked account does not match with the Discord.', embeds: [verificationTutorialEmbed] });
+                    await interaction.reply({ content: 'Your Minecraft\'s linked account does not match with the Discord.', embeds: [verificationTutorialEmbed] });
                 }
     
             }).catch(error => {
@@ -49,7 +49,7 @@ module.exports = {
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(`\`${error}\``)
                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                interaction.followUp({ embeds: [errorEmbed] });
+                interaction.reply({ embeds: [errorEmbed] });
             })  
 
         } catch(error) {
@@ -58,7 +58,7 @@ module.exports = {
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-            interaction.followUp({ embeds: [errorEmbed] });
+            interaction.reply({ embeds: [errorEmbed] });
         }
     },
   };

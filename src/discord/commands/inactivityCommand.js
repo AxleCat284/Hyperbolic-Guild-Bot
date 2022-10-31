@@ -36,7 +36,7 @@ module.exports = {
         const time = interaction.options.getString("time")*86400
         const expiration = toFixed((new Date().getTime()/1000 + time), 0)
 		const uuid = linked?.[interaction?.user?.id]?.data[0]
-        if (!uuid) interaction.followUp({ embeds: [verifyEmbed] });
+        if (!uuid) interaction.reply({ embeds: [verifyEmbed] });
 
         if (interaction.options.getString("time") <= 14) {
             try {
@@ -56,7 +56,7 @@ module.exports = {
                             .setAuthor({ name: 'An Error has occurred'})
                             .setDescription(`You must be in the guild to use this command.`)
                             .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                        await interaction.followUp({embeds: [errorEmbed] });
+                        await interaction.reply({embeds: [errorEmbed] });
                         return;
                     }
 
@@ -75,7 +75,7 @@ module.exports = {
                         .setAuthor({ name: 'Inactivity request.'})
                         .setDescription(`Inactivity request has been successfully sent to the guild stafff.`)
                         .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                    await interaction.followUp({ embeds: [ inactivityResponse ] });
+                    await interaction.reply({ embeds: [ inactivityResponse ] });
                 })
             } catch (error) {
                 const errorEmbed = new EmbedBuilder()
@@ -83,7 +83,7 @@ module.exports = {
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(error)
                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                await interaction.followUp({ embeds: [errorEmbed] });
+                await interaction.reply({ embeds: [errorEmbed] });
             }
         } else {
             const errorEmbed = new EmbedBuilder()
@@ -91,7 +91,7 @@ module.exports = {
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(`You cannot take break longer than 14 Days.`)
                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-            await interaction.followUp({ embeds: [errorEmbed] });
+            await interaction.reply({ embeds: [errorEmbed] });
         }
 
 

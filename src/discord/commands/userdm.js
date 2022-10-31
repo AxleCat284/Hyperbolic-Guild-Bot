@@ -37,10 +37,10 @@ module.exports = {
           },
       };
       if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managementRole)) {
-          await interaction.followUp({embeds: [discordlog] })
+          await interaction.reply({embeds: [discordlog], ephemeral: false })
           client.users.send(`${user.id}`, {embeds: [dmlog] } );
       } else {
-          await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+          await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
       }
     }
   }

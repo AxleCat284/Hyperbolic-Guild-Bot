@@ -7,7 +7,7 @@
     "messageRepeatBypassLength": 24
   },
   "discord": {
-    "token": "MTAxNDY0NDU3MTAzODI4NTg2NQ.Gia578.vvlK1fNQurRuT8DjrHN92ZAo8I_Ne7JV1SEz1Y",
+    "token": "MTAxNDY0NDU3MTAzODI4NTg2NQ.GaNvY4.tlHlBEDT6UsEcBM9G0aBXosZLuGy45OCLIY6Ak",
     "clientID": "1014644571038285865",
     "serverID": "859982166673588246",
     "guildChatChannel": "1031366125432340510",
@@ -44,7 +44,7 @@
   },
   "api": {
     "hypixelAPI": "https://api.hypixel.net",
-    "hypixelAPIkey": "5987b4d0-e69e-49ed-ae2a-0a6dda03e6b0",
+    "hypixelAPIkey": "3710da66-1be3-4054-beac-a8df8d76ef00",
 
     "skyHelperAPI": "http://192.95.42.73:1924//v1",
     "skyHelperKey": "DuckySoLucky",

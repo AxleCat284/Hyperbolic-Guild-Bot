@@ -38,11 +38,11 @@ module.exports = {
 
         if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.commandRole)) {
             await member.timeout(1);
-            await interaction.followUp({embeds: [discordlog] })
+            await interaction.reply({embeds: [discordlog] })
             await client.channels.cache.get(config.channels.timeoutChannel).send({embeds: [timeoutlog] })
 
         } else {
-            await interaction.followUp({ content: 'You do not have permission to run this command.', ephemeral: true })
+            await interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
         }
       }
     }

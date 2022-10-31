@@ -68,7 +68,7 @@ module.exports = {
                                     .setAuthor({ name: 'An Error has occurred'})
                                     .setDescription(`${username} is not in the guild.`)
                                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                                await interaction.followUp({embeds: [errorEmbed] });
+                                await interaction.reply({embeds: [errorEmbed] });
                                 return;
                             }
 
@@ -87,7 +87,7 @@ module.exports = {
                                 .setAuthor({ name: 'Inactivity request.'})
                                 .setDescription(`Successfully created inactivity request for \`${username}\`.`)
                                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                            await interaction.followUp({ embeds: [ inactivityResponse ] });
+                            await interaction.reply({ embeds: [ inactivityResponse ] });
                         })
                 } else {
                     const errorEmbed = new EmbedBuilder()
@@ -95,7 +95,7 @@ module.exports = {
                         .setAuthor({ name: 'An Error has occurred'})
                         .setDescription(`You cannot take break longer than 14 Days.`)
                         .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                    await interaction.followUp({ embeds: [errorEmbed] });
+                    await interaction.reply({ embeds: [errorEmbed] });
                 }
             } else {
                 const errorEmbed = new EmbedBuilder()
@@ -103,7 +103,7 @@ module.exports = {
                     .setAuthor({ name: 'An Error has occurred'})
                     .setDescription(`You do not have permission to run this command.`)
                     .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-                interaction.followUp({ embeds: [errorEmbed] });  
+                interaction.reply({ embeds: [errorEmbed] });  
             }
         } catch (error) {
             const errorEmbed = new EmbedBuilder()
@@ -111,7 +111,7 @@ module.exports = {
                 .setAuthor({ name: 'An Error has occurred'})
                 .setDescription(error)
                 .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' });
-            await interaction.followUp({ embeds: [errorEmbed] });
+            await interaction.reply({ embeds: [errorEmbed] });
         }
     },
   };

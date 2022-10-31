@@ -14,7 +14,7 @@ module.exports = {
                 text: 'Hyperbolic',
             },
         };
-        interaction.followUp({ embeds: [opinion] });
+        interaction.reply({ embeds: [opinion] });
   
     },
   };

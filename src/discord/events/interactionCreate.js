@@ -3,6 +3,7 @@ const {
   ActionRowBuilder,
   ButtonBuilder,
   ButtonStyle,
+  Options,
 } = require("discord.js");
 const { getLatestProfile } = require('../../../API/functions/getLatestProfile')
 const getWeight = require('../../../API/stats/weight')
@@ -13,6 +14,8 @@ const config = require("../../../config.json");
 const Logger = require("../.././Logger");
 const axios = require("axios");
 const fs = require("fs");
+const { isBooleanObject } = require("util/types");
+const { isBoolean } = require("lodash");
 
 const verifyEmbed = new EmbedBuilder()
   .setColor(15548997)
@@ -29,7 +32,7 @@ module.exports = {
   name: "interactionCreate",
   async execute(interaction) {
     if (interaction.isChatInputCommand()) {
-      await interaction.deferReply({ ephemeral: false }).catch(() => {});
+      //      await interaction.deferReply({ephemeral: false});
 
       const command = interaction.client.commands.get(interaction.commandName);
       if (!command) return;
@@ -45,7 +48,7 @@ module.exports = {
           ephemeral: true,
         });
       }
-    }
+    } 
 
     if (interaction.isSelectMenu()) {
       // ? Guild Experience Filter

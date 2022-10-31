@@ -11,6 +11,6 @@ module.exports = {
       .setDescription(`Latency: ${client.ws.ping}ms`)
       .setFooter({ text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png' })
       
-    interaction.followUp({ embeds: [embed] })
+    interaction.reply({ embeds: [embed] })
   },
 };

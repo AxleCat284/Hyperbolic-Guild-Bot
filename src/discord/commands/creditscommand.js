@@ -14,7 +14,7 @@ module.exports = {
                 text: 'Made by [AxleWitch#9171](https://www.duckysolucky.com) Edited by [AxleWitch#9171](https://discord.gg/esfjze4z)',
             },
         };
-        interaction.followUp({ embeds: [credits] });
+        interaction.reply({ embeds: [credits] });
   
     },
   };

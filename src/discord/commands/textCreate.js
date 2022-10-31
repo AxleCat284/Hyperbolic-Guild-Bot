@@ -19,17 +19,28 @@ module.exports = {
 
  
 
-    //if you're reading this dm me the word tomato <3
 
+    
   if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managementRole)) {
 
     let message = interaction.options.getString('message').replaceAll('\\n', '\n')
-    interaction.channel.send(message);
-    interaction.reply({ content: 'This is a reply message confirming your command was sent, please delete me!', ephemeral: true});
+    interaction.channel.send(`${message}`);
+
+
+    interaction.reply({
+      content: "Success.",
+      ephemeral: true
+  })
+  
+
+
+    
+    
+
 
 
 } else {
-    interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: true })
+    interaction.reply({ content: 'You do not have permission to run this command.', ephemeral: false})
     }
 }
 };;
