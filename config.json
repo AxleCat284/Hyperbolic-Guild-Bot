@@ -6,6 +6,14 @@
     "messageRepeatBypass": false,
     "messageRepeatBypassLength": 24
   },
+  "music":{
+    "global": true,
+    "maxVol": 100,
+    "leaveonEnd": false,
+    "loopMessage": false,
+    "spotifyBridge": true,
+    "defaultVOL": 75
+  },
   "discord": {
     "token": "MTAxNDY0NDU3MTAzODI4NTg2NQ.GaNvY4.tlHlBEDT6UsEcBM9G0aBXosZLuGy45OCLIY6Ak",
     "clientID": "1014644571038285865",
@@ -20,7 +28,6 @@
     "messageMode": "minecraft",
     "filterMessages": false,
     "joinMessage": true,
-
     "linkedRole": "1031366062257741905",
     "guildMemberRole": "1031366060953313340",
     "eliteRole": "1031724050852085801",
@@ -96,3 +103,6 @@
     }
   }
 }
+    
+
+
