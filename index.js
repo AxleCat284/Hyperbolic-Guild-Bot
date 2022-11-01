@@ -1,15 +1,26 @@
 process.on('uncaughtException', function (err) {console.log(err.stack)})
 const express = require('express');
+const chalk = require ('chalk');
 const webServer = require('./src/web/server.js');
 const { port } = require('./OAuth2config.json');
 const app = require('./src/Application');
-const chalk = require ('chalk');
 
 
 'use strict'
 process.title = 'Hypixel Discord Chat Bridge'
 
 
+console.log(chalk.blueBright` ██░ ██▓██   ██▓ ██▓███  ▓█████  ██▀███   ▄▄▄▄    ▒█████   ██▓     ██▓ ▄████▄  
+▓██░ ██▒▒██  ██▒▓██░  ██▒▓█   ▀ ▓██ ▒ ██▒▓█████▄ ▒██▒  ██▒▓██▒    ▓██▒▒██▀ ▀█  
+▒██▀▀██░ ▒██ ██░▓██░ ██▓▒▒███   ▓██ ░▄█ ▒▒██▒ ▄██▒██░  ██▒▒██░    ▒██▒▒▓█    ▄ 
+░▓█ ░██  ░ ▐██▓░▒██▄█▓▒ ▒▒▓█  ▄ ▒██▀▀█▄  ▒██░█▀  ▒██   ██░▒██░    ░██░▒▓▓▄ ▄██▒
+░▓█▒░██▓ ░ ██▒▓░▒██▒ ░  ░░▒████▒░██▓ ▒██▒░▓█  ▀█▓░ ████▓▒░░██████▒░██░▒ ▓███▀ ░
+ ▒ ░░▒░▒  ██▒▒▒ ▒▓▒░ ░  ░░░ ▒░ ░░ ▒▓ ░▒▓░░▒▓███▀▒░ ▒░▒░▒░ ░ ▒░▓  ░░▓  ░ ░▒ ▒  ░
+ ▒ ░▒░ ░▓██ ░▒░ ░▒ ░      ░ ░  ░  ░▒ ░ ▒░▒░▒   ░   ░ ▒ ▒░ ░ ░ ▒  ░ ▒ ░  ░  ▒   
+ ░  ░░ ░▒ ▒ ░░  ░░          ░     ░░   ░  ░    ░ ░ ░ ░ ▒    ░ ░    ▒ ░░        
+ ░  ░  ░░ ░                 ░  ░   ░      ░          ░ ░      ░  ░ ░  ░ ░      
+        ░ ░                                    ░                      ░        
+                                                                               `)
 
 const web = express();
 
