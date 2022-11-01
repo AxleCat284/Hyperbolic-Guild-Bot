@@ -11,7 +11,7 @@ class StateHandler {
     Logger.discordMessage("Client ready, logged in as " + this.discord.client.user.tag);
     this.discord.client.user.setPresence({
       activities: [
-        { name: `Over Hyperbolic Network`, type: ActivityType.Watching },
+        { name: `Over The Hyperbolic Network`, type: ActivityType.Watching },
       ],
     });
     const channel = await getChannel("Guild");
