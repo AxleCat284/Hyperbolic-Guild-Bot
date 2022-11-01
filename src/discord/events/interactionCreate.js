@@ -1,10 +1,5 @@
 const {
-  EmbedBuilder,
-  ActionRowBuilder,
-  ButtonBuilder,
-  ButtonStyle,
-  Options,
-} = require("discord.js");
+  EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Options, ApplicationCommandOptionType} = require("discord.js");
 const { getLatestProfile } = require('../../../API/functions/getLatestProfile')
 const getWeight = require('../../../API/stats/weight')
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -200,6 +195,7 @@ module.exports = {
             iconURL: "https://imgur.com/tgwQJTX.png",
           });
         interaction.followUp({ embeds: [errorEmbed], ephemeral: true });
+ 
       }
     }
   },
