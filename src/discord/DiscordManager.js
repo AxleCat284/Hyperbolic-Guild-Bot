@@ -1,5 +1,7 @@
 const { Client, Collection, AttachmentBuilder, GatewayIntentBits } = require("discord.js");
+const { readdirSync } = require('fs');
 const CommunicationBridge = require("../contracts/CommunicationBridge");
+const { Player } = require('discord-player');
 const messageToImage = require("../contracts/messageToImage");
 const MessageHandler = require("./handlers/MessageHandler");
 const StateHandler = require("./handlers/StateHandler");
@@ -26,7 +28,7 @@ class DiscordManager extends CommunicationBridge {
       intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.MessageContent
       ],
     });
 
@@ -246,8 +248,7 @@ class DiscordManager extends CommunicationBridge {
         break;
       default:
         throw new Error("Invalid message mode: must be bot or webhook");
-    }
-  }
 }
-
+}
+}
 module.exports = DiscordManager;
