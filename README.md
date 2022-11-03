@@ -1,12 +1,10 @@
 # Hypixel Discord Bot ✨Enhanced✨
 
 Official Discord Bot of [Hypixel Network Hyperbolic Guild](https://discord.gg/hyperbolic)
-Made By
 
-- Calculus#0001
-- DuckySoLucky#5181
-- AxleWitch#9171
-- **Kathund**#2004
+Made By [DuckySoLucky#5181](https://discord.com/users/486155512568741900) and [Calculus#0001](https://discord.com/users/597603275365285901)
+
+Stolen by Axle#9171
 
 <hr>
 
