@@ -21,7 +21,7 @@ module.exports = {
             name: 'footer',
             description: 'footer text',
             type: 3,
-            required: true
+            required: false
         }
         
       ],
@@ -30,7 +30,7 @@ module.exports = {
 
         const title = interaction.options.getString("title")
         let context = interaction.options.getString('context').replaceAll('\\n', '\n')
-        const footer = interaction.options.getString("footer")
+        const footer = interaction.options.getString("footer") || "hyperbolic"
        
         const chat = {
             title: `${title}`,
