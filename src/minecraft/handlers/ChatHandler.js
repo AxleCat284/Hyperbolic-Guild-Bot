@@ -1,6 +1,7 @@
 const { replaceAllRanks, toFixed, addCommas } = require('../../contracts/helperFunctions')
 const { getLatestProfile } = require('../../../API/functions/getLatestProfile')
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+const chalk = require ('chalk');
 let guildInfo = [], guildRanks = [], members = [], guildTop = []
 const hypixel = require('../../contracts/API/HypixelRebornAPI')
 const { getUUID } = require('../../contracts/API/PlayerDBAPI')
@@ -37,8 +38,21 @@ class StateHandler extends EventHandler {
       let username = replaceAllRanks(message.substr(54))
       await delay(69)
       this.send(`/party accept ${username}`)
-      await delay(5000)
-      this.send(`/party leave`)        
+      await delay(6000)
+      this.send(`/party leave`)
+      let name = replaceAllRanks(message.split('has')[0].replaceAll('-----------------------------------------------------\n', ''))
+      console.log(chalk.cyanBright`Fragbot >> ${name} Just used the fragbot`)     
+      const channel = client.channels.cache.get(config.channels.fragbotChannel);
+      const fragbot = {
+        title: `Fragbot Logs`,
+        description: (`${name} Has Partied The Bot!`),
+        timestamp: new Date().toISOString(),
+        footer: {
+            text: `Hyperbolic Logging Systems`,
+        },
+    };
+      channel.send({embeds: [fragbot]});
+
     }
 
     if (this.isGuildTopMessage(message)) {
@@ -195,7 +209,7 @@ class StateHandler extends EventHandler {
     if (this.isJoinMessage(message)) {
       let user = message.replace(/\[(.*?)\]/g, '').trim().split(/ +/g)[0]
       await delay(1000)
-      bot.chat(`/gc ${messages.guildJoinMessage} | By DuckySoLucky#5181`)
+      bot.chat(`/gc Welcome to Hyperbolic! -> We are glad you could join us, make sure to join the discord at /g discord!`)
       return [this.minecraft.broadcastHeadedEmbed({
         message: `${user} ${messages.joinMessage}`,
         title: `Member Joined`,
