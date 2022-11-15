@@ -8,9 +8,7 @@ server.all('/', (req, res) => {
   res.send(` `)
 })
 
-//--------------------------------
-// If u wanna have fancy website
-/*
+
 var http = require('http');
 var fs = require('fs');
 const PORT=1382; 
@@ -21,5 +19,5 @@ fs.readFile('./src/web/index.html', function (err, html) {
         response.write(html);  
         response.end();  
     }).listen(PORT);
-});*/
+});
  

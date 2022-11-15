@@ -1,8 +1,8 @@
 const { EmbedBuilder, ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 
 module.exports = {
-    name: 'helpverify',
-    description: 'helps with verifying ig',
+    name: 'verifyhow',
+    description: 'verify help',
   
     execute: async (interaction, client) => {
        
