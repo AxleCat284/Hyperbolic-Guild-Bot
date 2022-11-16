@@ -21,6 +21,13 @@ module.exports = {
     let message = interaction.options.getString('message').replaceAll('\\n', '\n')
     await interaction.channel.send(`${message}`);
     await interaction.reply({content: "Success.", ephemeral: true})
+    const emitlog = {
+      title: `Normal Message Emit Logs`,
+      description: (`Message:\n\`${message}\`\n\nwas sent by:\n**Username**: ${interaction.user}\n**ID**: ${interaction.user.id}`),
+      timestamp: new Date().toISOString(),
+      footer: {text: `Hyperbolic Logging`,},
+  };
+    await client.channels.cache.get(config.channels.emitChannel).send({embeds: [emitlog] })
   
 
 } else {
