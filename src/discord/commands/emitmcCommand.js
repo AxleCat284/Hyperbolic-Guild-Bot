@@ -17,8 +17,8 @@ module.exports = {
   
   if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managementRole)) {
     let message = interaction.options.getString('message').replaceAll('\\n', '\n')
-    bot.chat(`/gc ${message}`)
-    await interaction.reply({content: `Your message of ${message} has been sent!`, ephemeral: true})
+    await bot.chat(`/gc ${message}`)
+    interaction.reply({content: `Your message of ${message} has been sent!`, ephemeral: true})
   
 
 } else {
