@@ -19,13 +19,8 @@ module.exports = {
   if ((await interaction.guild.members.fetch(interaction.user)).roles.cache.has(config.discord.managementRole)) {
 
     let message = interaction.options.getString('message').replaceAll('\\n', '\n')
-    interaction.channel.send(`${message}`);
-
-
-    interaction.reply({
-      content: "Success.",
-      ephemeral: true
-  })
+    await interaction.channel.send(`${message}`);
+    await interaction.reply({content: "Success.", ephemeral: true})
   
 
 } else {
