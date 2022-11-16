@@ -2,8 +2,8 @@ const { EmbedBuilder, ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, Button
 const config = require('../../../config.json')
 
 module.exports = {
-    name: 'emit',
-    description: 'Emits a message',
+    name: 'emitmc',
+    description: 'Emits a message to guild chat',
     options: [
         {
             name: 'message',
