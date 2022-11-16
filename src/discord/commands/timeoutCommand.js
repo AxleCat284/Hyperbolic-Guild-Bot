@@ -40,7 +40,7 @@ module.exports = {
           
         const timeoutlog = {
             title: 'Timeout Log',
-            description: (`**${member} Was Timed Out!**\n\n**Reason:** ${reason}\n**Time:** ${time}\n\n**ID:** ${member.id}`),
+            description: (`**${member} Was Timed Out!**\n\n**Reason:** ${reason}\n**Time:** ${time}\n\n**ID:** ${member.id}\n\n**By Moderator**: ${interaction.user}\n**Moderator ID**: ${interaction.user.id}`),
             timestamp: new Date().toISOString(),
             footer: {
                 text: (`Hyperbolic Staff Team`),
