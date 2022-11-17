@@ -71,6 +71,7 @@
     "playerDBAPI": "https://playerdb.co/api/player/minecraft",
 
     "imgurAPIkey": "98ea6fff6d0ce73"
+  
   },
   "event": {
     "enabled": true,
