@@ -1,11 +1,14 @@
 
 const express = require('express');
-const chalk = require ('chalk');
+const chalk = require ('chalk'); 
 const server = express();
-server.listen(1439, () => { console.log(chalk.bold.cyanBright.cyan`Web Server is Ready!`) });
- 
+server.listen(1439, async () => { console.log(chalk.bgCyanBright.black`[${await getCurrentTime()}] Website >` + ' ' + chalk.cyanBright`Website Ready on port 1439`) })
+async function getCurrentTime() {
+  return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+}
 server.all('/', (req, res) => {
   res.send(` `)
+
 })
 
 

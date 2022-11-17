@@ -1,3 +1,11 @@
+console.log(`Welcome.`)
+console.log(`Loading has started, make sure you have set everything up. keep in mind if you see this message the bot has not "started" its just loading.`)
+console.log(`.`)
+console.log(`..`)
+console.log(`...`)
+console.log(`....`)
+console.log(`.....`)
+console.log(`......`)
 process.on('uncaughtException', function (err) {console.log(err.stack)})
 const express = require('express');
 const chalk = require ('chalk');
@@ -27,10 +35,12 @@ const web = express();
 web.get('/', (request, response) => {
   return response.sendFile('.src/oath/index.html', { root: '.' });
 });
-
-web.listen(port, () => console.log(chalk.bgGreen.black`App listening at http://localhost:${port}`));
+web.listen(port, async () => console.log(chalk.bgGreenBright`[${await getCurrentTime()}] oAth2 >`) + chalk.redBright(`Website ready, port logged to ${port}`))
 console.log(chalk.red.bold.underline`Warning!! OATH2 is currently in development for hyperbolic and is not reccomended to be used for general use due to the fact it uses your hoster's ip to connect your bot to discord, contact myself to get a copy of the bot not including AOTH2 connections!!`);
 
+async function getCurrentTime() {
+    return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+  }
 app
   .register()   
   .then(() => {

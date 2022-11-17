@@ -16,12 +16,8 @@
     "chat",
     "bridge"
   ],
-  "author": "DuckySoLucky",
+  "author": "Axle",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DuckySoLucky/hypixel-discord-chat-bridge/issues"
-  },
-  "homepage": "https://github.com/DuckySoLucky/hypixel-discord-chat-bridge#readme",
   "dependencies": {
     "@discordjs/opus": "^0.8.0",
     "@discordjs/rest": "^1.3.0",
