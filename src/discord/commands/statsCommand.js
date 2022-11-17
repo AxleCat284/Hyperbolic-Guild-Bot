@@ -37,9 +37,6 @@ module.exports = {
             footer: {text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png'},
                 };
         await interaction.reply({ embeds: [stats] })
- 
-    
             }
-    
   }
   
