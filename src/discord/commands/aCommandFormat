@@ -9,6 +9,15 @@ module.exports = {
   }],
 
   execute: async (interaction, client) => {
-
+    let  = interaction.options.getString('')
+    const  = {
+      title: '',
+      description: (``),
+      timestamp: new Date().toISOString(),
+      footer: {
+          text: (``),
+      },
+  };
+  interaction.reply({content: ""})
   },
 };

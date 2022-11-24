@@ -1,7 +1,7 @@
 const ms = require('ms');
 
 module.exports = {
-    name: 'ping',
+    name: 'musicconnection',
     description: "Get the ping of the bot!",
     async execute({ client, inter }) {
 

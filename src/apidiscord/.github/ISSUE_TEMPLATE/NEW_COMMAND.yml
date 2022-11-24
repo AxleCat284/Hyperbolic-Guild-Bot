@@ -1,0 +1,52 @@
+name: New Command
+description: Add a new discord bot command!
+title: "Add <command> command using <public api>"
+labels: ["good first issue", "hacktoberfest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in contributing to the project! Please fill out the following form to submit a new issue.
+        Please read the [CONTRIBUTING.md](https://github.com/thieleju/statsbot/blob/main/CONTRIBUTING.md) carefully before getting started!
+  - type: input
+    id: cmd
+    attributes:
+      label: Command Name
+      description: Put the name of the command here.
+      placeholder: /showPublicAPIData
+    validations:
+      required: true
+  - type: input
+    id: publicAPI
+    attributes:
+      label: Public API Resource
+      description: Put the link to the public API resource here.
+      placeholder: https://github.com/public-apis/public-apis
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please tell us about your command.
+      placeholder: This command will show public API data.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Implementation Details
+      value: |
+        - Add a new javascript file in the `commands` folder
+        - Use [axios](https://axios-http.com/docs/intro) to fetch the data from your public API
+        - Format the data in a readable way and send it to the user
+        - Use the [discord.js](https://discordjs.guide/interactions/slash-commands.html) docs to get started
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/thieleju/statsbot/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

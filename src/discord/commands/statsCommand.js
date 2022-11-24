@@ -16,7 +16,7 @@ module.exports = {
 
     execute: async (interaction, client) => {
         const username = interaction.options.getString("mcname");
-        const guild =  hypixel.getGuild("id", config.minecraft.guildID)
+        const guild = await hypixel.getGuild("id", config.minecraft.guildID);
   
         {
             await hypixel.getPlayer(username).then(async player => {
@@ -31,7 +31,7 @@ module.exports = {
         const stats = {
             title: `Showing stats for ${interaction.guild.name}`,
             description: (
-                `**Main Bot Name**: <@${config.discord.clientID}>\n**Minecraft Bot IGN**: ${bot.username}\n**Music Bot Name**: <@${config.discord.clientID2}>\n**Bot Latency**: \`${client.ws.ping}\` ms\n**Last Heartbeat Calculated**: ${ms(Date.now() - client.ws.shards.first().lastPingTimestamp, { long: true })} ago\n**Your Tag**: ${interaction.user}\n**Your ID** ${interaction.user.id}\n**Hypixel Media Linked**: \`depricated\`\n**Your Account Is Linked To**:  ${username}\n\n**Channel Info**:\nGuild Bridge: <#${config.discord.guildChatChannel}>\nOfficer Bridge: <#${config.discord.officerChannel}>\nQOTD Channel: <#${config.channels.qotdChannel}>\nSuggestions Channel: <#${config.channels.suggestionChannel}>\nRules Channel: <#${config.channels.rulesChannel}>\n\n**The Time For You Right Now**: ${new Date()}\n\n**Discord Invite**: ${config.discord.supportServerURL}\n**Guild Name And Tag**: **${config.minecraft.guildNAME}** ${config.minecraft.guildTAG}\n**Guild Roles**: **${config.minecraft.guildROLES}**\n**Guild Level**: ${guild.level}\n**Guild Members**: ${guild.members.length}
+                `**Main Bot Name**: <@${config.discord.clientID}>\n**Minecraft Bot IGN**: ${bot.username}\n**Music Bot Name**: <@${config.discord.clientID2}>\n**Bot Latency**: \`${client.ws.ping}\` ms\n**Last Heartbeat Calculated**: ${ms(Date.now() - client.ws.shards.first().lastPingTimestamp, { long: true })} ago\n**Your Tag**: ${interaction.user}\n**Your ID** ${interaction.user.id}\n**Your Account Is Linked To**:  \`${username}\`\n\n**Channel Info**:\nGuild Bridge: <#${config.discord.guildChatChannel}>\nOfficer Bridge: <#${config.discord.officerChannel}>\nQOTD Channel: <#${config.channels.qotdChannel}>\nSuggestions Channel: <#${config.channels.suggestionChannel}>\nRules Channel: <#${config.channels.rulesChannel}>\n\n**The Time For You Right Now**: <t:${Math.floor(Date.now() / 1000)}>\n\n**Discord Invite**: ${config.discord.supportServerURL}\n**Guild Name And Tag**: **${config.minecraft.guildNAME}** ${config.minecraft.guildTAG}\n**Guild Roles**: **${config.minecraft.guildROLES}**\n**Guild Level**: ${guild.level}\n**Guild Members**: ${guild.members.length}
                 `),
             timestamp: new Date().toISOString(),
             footer: {text: `made by /credits  | /help [command] for more information`, iconURL: 'https://i.imgur.com/FeOykcL.png'},

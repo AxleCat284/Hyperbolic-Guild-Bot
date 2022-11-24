@@ -1,6 +1,6 @@
 const chalk = require ('chalk');
 module.exports = async (client) => {
-    console.log(chalk.bgYellow.black(`[${await getCurrentTime()}] Music >`) + ' ' + chalk.yellow(`Client ready, logged in as Hyperbolic Music`));
+  console.log(chalk.bgMagenta.black(`[${await getCurrentTime()}] Discord >`) + ' ' + chalk.magenta(`Music Commands Ready For Client`));
     async function getCurrentTime() {
         return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
       }
