@@ -19,6 +19,7 @@
   "author": "Axle",
   "license": "MIT",
   "dependencies": {
+    "discord.js": "^14.3.0",
     "@discordjs/opus": "^0.8.0",
     "@discordjs/builders": "^0.13.0",
     "@discordjs/rest": "^0.1.0-canary.0",
@@ -37,7 +38,6 @@
     "css-select": "5.1.0",
     "discord-api-types": "^0.37.14",
     "discord-player": "^5.3.1",
-    "discord.js": "^14.3.0",
     "distube": "^4.0.4",
     "domhandler": "5.0.3",
     "dotenv": "^16.0.3",
